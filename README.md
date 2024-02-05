@@ -97,8 +97,3 @@ Run the test suite using:
 ```shell
 pytest .
 ```
-
-
-## *inspiration*
-
-This is currently how I like to make python projects/libraries, it ain't that deep.

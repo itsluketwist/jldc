@@ -3,12 +3,12 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["src"]
+packages = ["jldc"]
 
 [project]
-name = "python_template"
-version = "0.0.0"
-description = "python-template..."
+name = "jldc"
+version = "0.0.1"
+description = "Easily read/write JSONLines files that include dataclasses."
 readme = "README.md"
 authors = [{ name = "Lukas Twist", email = "itsluketwist@gmail.com" }]
 license = { file = "LICENSE" }
@@ -17,15 +17,18 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["python-template"]
+keywords = ["jldc"]
 dependencies = []
 requires-python = ">=3.10"
 
 [project.optional-dependencies]
+ml = [
+    "numpy ~= 1.26.0",
+]
 dev = [
     "pre-commit",
     "pytest",
 ]
 
 [project.urls]
-Homepage = "https://github.com/itsluketwist/python-template"
+Homepage = "https://github.com/itsluketwist/jldc"

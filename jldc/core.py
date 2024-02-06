@@ -2,6 +2,8 @@ import json
 from dataclasses import asdict, is_dataclass
 from typing import Iterator
 
+from dacite import DaciteError, from_dict
+
 from jldc.classes import Dataclass, JLDCDecoder, JLDCEncoder
 from jldc.constants import _JLDC_DATACLASS, DEFAULT_ENCODING
 
@@ -62,8 +64,8 @@ def _decode_json(
     if (_cls := line_dict.get(_JLDC_DATACLASS)) and _cls in class_map:
         line_dict.pop(_JLDC_DATACLASS)
         try:
-            return class_map[_cls](**line_dict)
-        except TypeError:
+            return from_dict(data_class=class_map[_cls], data=line_dict)
+        except DaciteError:
             pass
 
     return line_dict

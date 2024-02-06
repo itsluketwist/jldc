@@ -1,8 +1,8 @@
 # **jldc**
 
-Some handy utilities when using [JSON Lines](https://jsonlines.org/) files alongside 
-[python dataclass](https://docs.python.org/3/library/dataclasses.html) objects. 
-Allowing convenient one-line file reads/writes.
+Simplify using [JSON Lines](https://jsonlines.org/) files alongside 
+[python dataclass](https://docs.python.org/3/library/dataclasses.html) ([PEP-557][pep-557]) objects, 
+with convenient one-line reads/writes.
 
 ![check code workflow](https://github.com/itsluketwist/jldc/actions/workflows/check.yaml/badge.svg)
 
@@ -27,13 +27,15 @@ Allowing convenient one-line file reads/writes.
 Import the library and save/load lists of dataclasses or dictionaries with a single line.
 
 ```python
-from jldc.main import load_jsonl, save_jsonl
+from jldc.core import load_jsonl, save_jsonl
 from dataclasses import dataclass
+
 
 @dataclass
 class Person:
     name: str
     age: int
+
 
 save_jsonl("people.jsonl", [Person("Alice", 24), Person("Bob", 32)])
 
@@ -86,9 +88,7 @@ pre-commit run --all-files
 
 ## *todos*
 
-- Handle recursive dataclasses.
 - Upload to pypi.
-
 
 ## *testing*
 

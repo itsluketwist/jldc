@@ -7,8 +7,8 @@ packages = ["jldc"]
 
 [project]
 name = "jldc"
-version = "0.0.1"
-description = "Easily read/write JSONLines files that include dataclasses."
+version = "0.0.2"
+description = "Simplify using JSONLines files alongside dataclasses."
 readme = "README.md"
 authors = [{ name = "Lukas Twist", email = "itsluketwist@gmail.com" }]
 license = { file = "LICENSE" }
@@ -17,8 +17,10 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["jldc"]
-dependencies = []
+keywords = ["jldc", "jsonlines", "dataclasses"]
+dependencies = [
+    "dacite~=1.8.1",
+]
 requires-python = ">=3.10"
 
 [project.optional-dependencies]

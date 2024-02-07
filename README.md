@@ -1,12 +1,11 @@
 # **jldc**
 
 Simplify using [JSON Lines](https://jsonlines.org/) files alongside 
-[python dataclass](https://docs.python.org/3/library/dataclasses.html) ([PEP-557][pep-557]) objects, 
-with convenient one-line reads/writes.
+[python dataclass](https://docs.python.org/3/library/dataclasses.html) ([PEP-557](https://peps.python.org/pep-0557/)) 
+objects, with convenient one-line reads/writes.
 
 ![check code workflow](https://github.com/itsluketwist/jldc/actions/workflows/check.yaml/badge.svg)
 ![release workflow](https://github.com/itsluketwist/jldc/actions/workflows/release.yaml/badge.svg)
-
 
 <div>
     <!-- badges from : https://shields.io/ -->
@@ -21,7 +20,6 @@ with convenient one-line reads/writes.
         <img alt="JSON Lines" src="https://img.shields.io/badge/JSON Lines-black?style=for-the-badge&logo=JSON&logoColor=white" />
     </a>
 </div>
-
 
 ## *usage*
 
@@ -50,18 +48,18 @@ print(data)
 Install directly from GitHub, using pip:
 
 ```shell
-pip install 'git+https://github.com/itsluketwist/jldc'
+pip install jldc
 ```
 
 Use the `ml` extra to encode/decode the `numpy.ndarray` type:
 
 ```shell
-pip install 'jldc[ml]@git+https://github.com/itsluketwist/jldc'
+pip install jldc[ml]
 ```
 
 ## *development*
 
-Clone the repository code:
+Fork and clone the repository code:
 
 ```shell
 git clone https://github.com/itsluketwist/jldc.git

@@ -4,9 +4,7 @@ on:
     types: [published]
 
 jobs:
-  publish:
-
-    name: Upload release to PyPI
+  release:
 
     runs-on: ubuntu-latest
 
@@ -18,16 +16,22 @@ jobs:
       id-token: write
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+
+      - name: 1. Checkout the code...
+        uses: actions/checkout@v3
+
+      - name: 2. Configure Python...
+        uses: actions/setup-python@v3
         with:
           python-version: '3.10'
           architecture: x64
-      - name: Build package
+
+      - name: 3. Build package
         run: |
           python -m pip install --upgrade build
           python -m build
-      - name: Publish package to PyPI
+
+      - name: 4. Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__

@@ -37,3 +37,5 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/itsluketwist/jldc"
+Code = "https://github.com/itsluketwist/jldc"
+Download = "https://github.com/itsluketwist/jldc/tags"

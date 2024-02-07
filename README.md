@@ -5,6 +5,7 @@ Simplify using [JSON Lines](https://jsonlines.org/) files alongside
 with convenient one-line reads/writes.
 
 ![check code workflow](https://github.com/itsluketwist/jldc/actions/workflows/check.yaml/badge.svg)
+![release workflow](https://github.com/itsluketwist/jldc/actions/workflows/release.yaml/badge.svg)
 
 
 <div>
@@ -14,7 +15,7 @@ with convenient one-line reads/writes.
         <img alt="MIT License" src="https://img.shields.io/badge/Licence-MIT-yellow?style=for-the-badge&logo=docs&logoColor=white" />
     </a>
     <a href="https://www.python.org/">
-        <img alt="Python 3" src="https://img.shields.io/badge/Python_3-blue?style=for-the-badge&logo=python&logoColor=white" />
+        <img alt="Python 3.10+" src="https://img.shields.io/badge/Python_3.10+-blue?style=for-the-badge&logo=python&logoColor=white" />
     </a>
     <a href="https://jsonlines.org/">
         <img alt="JSON Lines" src="https://img.shields.io/badge/JSON Lines-black?style=for-the-badge&logo=JSON&logoColor=white" />
@@ -85,10 +86,6 @@ pre-commit autoupdate
 
 pre-commit run --all-files
 ```
-
-## *todos*
-
-- Upload to pypi.
 
 ## *testing*
 

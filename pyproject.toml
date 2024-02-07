@@ -1,13 +1,16 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "setuptools-git-versioning<2"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
 
 [tool.setuptools]
 packages = ["jldc"]
 
 [project]
 name = "jldc"
-version = "0.0.2"
+dynamic = ["version"]
 description = "Simplify using JSONLines files alongside dataclasses."
 readme = "README.md"
 authors = [{ name = "Lukas Twist", email = "itsluketwist@gmail.com" }]

@@ -45,7 +45,7 @@ print(data)
 
 ## *installation*
 
-Install directly from GitHub, using pip:
+Install directly from PyPI using pip:
 
 ```shell
 pip install jldc
